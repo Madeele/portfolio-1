@@ -1,5 +1,6 @@
 :root{
     --bgc: #2C2C2C;
+    --grey: #6B6B6B;
     --red: #E0576D;
     --blue: #3750D4;
     --red-gradient: ;
@@ -24,6 +25,10 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 900;
 }
 
+.page h2{
+    text-transform: uppercase;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #fff;
@@ -32,6 +37,10 @@ body{
 .page{
     width: 100%;
     height: 100%;
+}
+
+main{
+    scroll-snap-type: y mandatory;
 }
 
 /*=====NAV====*/
@@ -132,6 +141,7 @@ body{
     height: 100vh;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 /*
 .splash-page img{
@@ -158,13 +168,54 @@ body{
 .main-heading{
     font-size: 40px;
     position: absolute;
-    top: 12%;
+    top: -40%;
     left: 25%;
+    animation: startAnime1 1s ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .sub-heading{
     font-size: 4vw;
     font-weight: 500;
+    animation: startAnime2 0.5s ease-out;
+    animation-delay: 1s;
+}
+
+/*====PROJECTS====*/
+
+.projects-page h2{
+    font-size: 12vw;
+    margin-left: calc(100% - (92% + 10px));
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.projects-item{
+    width: calc(0vw + 85%);
+    padding: 15px 10px;
+    margin: 15px auto;
+}
+
+.projects-item:nth-child(odd){
+    background: linear-gradient(310deg, rgba(224,87,109,1) 0%, rgba(220,109,127,1) 47%, rgba(215,136,149,1) 100%);
+}
+
+.projects-item:nth-child(even){
+    background: rgb(55,80,212);
+    background: linear-gradient(310deg, rgba(55,80,212,1) 0%, rgba(107,126,223,1) 46%, rgba(174,184,236,1) 100%);
+}
+
+.projects-item img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /*=====CV====*/
@@ -174,6 +225,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 3px rgb(168, 168, 168)solid;
 }
 
 .cv-page h2{
@@ -229,6 +281,39 @@ body{
         opacity: 0;
     }
 }
+
+@keyframes startAnime1{
+    from{
+        top: -40%;
+    }
+    50%{
+        top: 12%;
+    }
+
+    60%{
+        top: 6%;
+    }
+
+    70%{
+        top: 12%;
+    }
+
+    80%{
+        top: 8%;
+    }
+
+    90%{
+        top: 12%;
+    }
+
+    95%{
+        top: 10%;
+    }
+    to{
+        top: 12%;
+    }
+}
+
 /*
 @keyframes ja{
     from{
@@ -280,3 +365,118 @@ body{
         width: 300px;
     }
 }*/
+
+/*====CONTACT PAGE====*/
+.contact-page{
+    height: 100vh;
+    max-width: 100%;
+    border-top: 3px rgb(168, 168, 168)solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.contact-page h2{
+    font-size: 10vw;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-way{
+    display: grid;
+}
+
+.contact-item{
+    color: var(--red);
+    font-size: 6vw;
+    margin: 10px 0;
+}
+
+.contact-item i{
+    margin-right: 10px;
+    grid-area: icon;
+}
+
+.some{
+    margin-top: 30%;
+}
+
+.some-item{
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+.some-item a{
+    color: #fff;
+}
+
+/*====EXACT PROJECT====*/
+
+.exact-project{
+    background-color: #fff;
+    color: var(--bgc);
+    font-size: 18px;
+}
+
+.exact-project h3{
+    font-size: 10vw;
+}
+
+.exact-project h3, h4{
+    color: var(--bgc);
+}
+
+.exact-project h4{
+    font-size: 7vw;
+}
+
+.type{
+    font-size: 6vw;
+    color: var(--grey);
+}
+
+.project-info{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-visualisation{
+    width: 100%;
+    height: 300px;
+    padding: 15px 0;
+    margin: 15px auto;
+    background: linear-gradient(310deg, rgba(224,87,109,1) 0%, rgba(220,109,127,1) 47%, rgba(215,136,149,1) 100%);
+}
+
+.project-visualisation img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.project-details{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.project-details-item{
+    display: flex;
+    margin-top: 5px;
+}
+
+.project-details-item i {
+    margin-right: 5px;
+}
+
+.project-text{
+    padding: 20px 0;
+}
+
+.devices{
+    margin: 20px 0;
+    font-size: 18px;
+}

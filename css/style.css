@@ -676,6 +676,38 @@ main{
 }
 
 @media (min-width: 900px){
+    
+    .nav-mobile-container{
+        display: none;
+    }
+
+    .nav{
+        right: 20px;
+        transform: scale(1);
+        background: none;
+        width: 10%;
+    }
+
+    .nav>ul{
+        text-align: left;
+    }
+
+    .nav>ul>li{
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav>ul>li::after{
+        content:'';
+        width: 15px;
+        height: 15px;
+        display: block;
+        border-radius: 30px;
+        margin-left: 10px;
+        background-color: #fff;
+    }
+    
     .splash-page{
         background-size: 90%;
         background-position: -166px 228px;

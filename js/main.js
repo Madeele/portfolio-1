@@ -1,5 +1,5 @@
 //Showing nav
-
+/*
 let navBtn = document.querySelector(".nav-mobile-btn");
 navBtn.addEventListener("click", showNav);
 
@@ -14,4 +14,4 @@ function showNav(){
 function hideNav(){
     document.querySelector(".nav").setAttribute("style", "right: -3000px; transform: scale(0); border-radius: 1000px;");
     document.querySelector(".nav-mobile-container").style.display="block";
-}
+}*/

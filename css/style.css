@@ -638,6 +638,10 @@ main{
         font-size: 3vw;
     }
 
+    .some{
+        margin-top: 10%;
+    }
+
     .project-main-content{
         flex-direction: row;
     }
@@ -682,6 +686,57 @@ main{
     }
 
     .projects-container{
+        max-width: 1100px;
+        margin: 10px auto;
         grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+
+    .timeline-container{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .contact-page h2, .cv-page h2, .experience-page h2, .projects-page h2{
+        font-size: 50px;
+    }
+
+    .contact-item{
+        font-size: 20px;
+    }
+
+    .exact-project{
+        background-color: rgb(0, 0, 0, 0.6);
+    }
+    .exact-project-container{
+        max-width: 1100px;
+        
+        margin: 40px auto;
+        height: 90%;
+        background-color: #fff;
+    }
+
+    .project-visualisation{
+        width: 45%;
+    }
+
+    .project-visualisation img{
+        width: 70%;
+    }
+
+    .project-info{
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .exact-project h3{
+        font-size: 50px;
+    }
+
+    .exact-project h4{
+        font-size: 25px;
+    }
+
+    .type{
+        font-size: 25px;
     }
 }

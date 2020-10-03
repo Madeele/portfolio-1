@@ -29,9 +29,21 @@ h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
 }
 
+body::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: var(--blue);
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #fff;
+    position: relative;
 }
 
 .page{
@@ -79,7 +91,7 @@ main{
     font-size: 14px;
 }
 
-.nav>ul>li a{
+.link{
     font-family: brother-1816, sans-serif;
     font-weight: 900;
     font-size: 22px;
@@ -88,9 +100,17 @@ main{
     transition: 0.2s ease-out;  
 }
 
-.nav>ul>li a:hover{
+.link:hover{
     font-size: 30px;
     color: var(--bgc);    
+}
+
+.active{
+    font-size: 30px;
+    color: var(--bgc);
+    font-family: brother-1816, sans-serif;
+    font-weight: 900;
+    text-decoration: none;
 }
 
 .nav-mobile-container{
@@ -135,7 +155,7 @@ main{
 /*====SPLASH PAGE====*/
 
 .splash-page{
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg.svg");
     background-position: -110px 300px;
     background-repeat: no-repeat;
     height: 100vh;
@@ -159,17 +179,16 @@ main{
     bottom: -100px;
     left: -100px;
     transform: rotate(0deg);
-    width: 300px;
+    width: auto;
+    max-height: calc(100vh - 25%);
     z-index: 90;
 }
-
-
 
 .main-heading{
     font-size: 40px;
     position: absolute;
-    top: -40%;
-    left: 25%;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 20%);
     animation: startAnime1 1s ease-out;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
@@ -200,6 +219,10 @@ main{
     width: calc(0vw + 85%);
     padding: 15px 10px;
     margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .projects-item:nth-child(odd){
@@ -211,11 +234,24 @@ main{
     background: linear-gradient(310deg, rgba(55,80,212,1) 0%, rgba(107,126,223,1) 46%, rgba(174,184,236,1) 100%);
 }
 
-.projects-item img{
-    width: 40%;
+.tablet{
+    width: 80%;
     height: auto;
+}
+
+.phone{
+     width: 40%;
+    height: auto;
+}
+
+.projects-item:hover img{
+    transform: scale(1.1);
+}
+
+.projects-item img{
     display: block;
     margin: 0 auto;
+    transition: 0.1s;
 }
 
 /*====EXPERIENCE PAGE====*/
@@ -380,7 +416,7 @@ main{
         opacity: 0;
     }
 }
-
+/*
 @keyframes startAnime1{
     from{
         top: -40%;
@@ -411,7 +447,7 @@ main{
     to{
         top: 12%;
     }
-}
+}*/
 
 /*
 @keyframes ja{
@@ -513,9 +549,23 @@ main{
 /*====EXACT PROJECT====*/
 
 .exact-project{
-    background-color: #fff;
+    background-color: rgb(0, 0, 0, 0.6);
     color: var(--bgc);
     font-size: 18px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:10000;
+}
+
+.exact-project-container{
+    overflow-y: scroll;
+    height: auto;
+    background-color: #fff;
 }
 
 .exact-project h3{
@@ -533,6 +583,7 @@ main{
 .project-main-content{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .type{
@@ -592,6 +643,7 @@ main{
 
 .close{
     position: absolute;
+    cursor: pointer;
     font-size: 24px;
     top: 20px;
     right: 20px;
@@ -607,7 +659,8 @@ main{
 @media (min-width: 600px) {
     
     .splash-page img{
-        width: 350px;
+        width: auto;
+        max-height: calc(100vh - 10%);
     }
 
     .sub-heading{
@@ -685,7 +738,10 @@ main{
         right: 20px;
         transform: scale(1);
         background: none;
-        width: 10%;
+        width: calc(100vw - 80%);
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
     }
 
     .nav>ul{
@@ -696,6 +752,33 @@ main{
         padding: 0;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    .active{
+        font-size: 35px;
+        color: rgb(255, 255, 255);
+        font-family: brother-1816, sans-serif;
+        font-weight: 900;
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    .link:hover{
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+    }
+
+    .link{
+        color: rgb(255, 255, 255, 0.4);
+        font-family: brother-1816, sans-serif;
+        font-weight: 900;
+        font-size: 22px;
+        text-decoration: none;
+    }
+
+    .nav>ul>li:first-child, .nav>ul>li:nth-child(2){
+        display:none;
     }
 
     .nav>ul>li::after{
@@ -709,12 +792,22 @@ main{
     }
     
     .splash-page{
-        background-size: 90%;
-        background-position: -166px 228px;
+        background-size: 60%;
+        background-position: -210px 228px;
     }
 
     .splash-page img{
-        width: 400px;
+        width: auto;
+        max-height: calc(100vh - 10%);
+    }
+
+    .main-heading{
+        font-size: 70px;
+    }
+
+    .sub-heading{
+        font-size: 20px;
+        max-width: 600px;
     }
 
     .projects-container{
@@ -736,14 +829,11 @@ main{
         font-size: 20px;
     }
 
-    .exact-project{
-        background-color: rgb(0, 0, 0, 0.6);
-    }
     .exact-project-container{
         max-width: 1100px;
         
         margin: 40px auto;
-        height: 90%;
+        height: 90vh;
         background-color: #fff;
     }
 

@@ -293,7 +293,7 @@ main{
 
 .timeline{
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 10px 0 10px 0;
     position: relative;
 }

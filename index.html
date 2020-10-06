@@ -13,11 +13,12 @@
     <title>Wojciech Dzwończyk - front-end developer and UX/UI designer</title>
 </head>
 <body>
-    <main>
+    <main id="content">
+        <img src="img/wojtek-logo-white.svg" class="logo-white" alt="logo">
         <nav class="nav">
             <ul>
                 <li><i class="fas fa-times"></i></li>
-                <li>Wojciech Dzwończyk</li>
+                <li><img src="img/wojtek-logo.svg" class="logo" alt="logo"></li>
                 <li><a href="#splash" class="link active">about</a></li>
                 <li><a href="#projects" class="link">projects</a></li>
                 <li><a href="#experience" class="link">experience</a></li>
@@ -39,19 +40,20 @@
         <section class="page projects-page" id="projects">
             <h2>Projects</h2>
             <div class="projects-container">
-                <div class="projects-item">
+                <div class="projects-item item" id="tmr-project">
+                    <img src="img/throw-me-right-final1.png" class="phone" alt="project">
+                    <h4>Throw me right</h4>
+                    <p>SPA web app</p>
+                </div>
+                <div class="projects-item" id="salvatio-project">
                     <img src="img/salvatio-mockup.png" class="phone" alt="project">
                     <h4>Salvatio push</h4>
                     <p>Digital prototype</p>
-                    <a href="#"></a>
                 </div>
-                <div class="projects-item">
+                <div class="projects-item" id="sc-project">
                     <img src="img/study-counselling-mockup.svg" class="tablet" alt="project">
-                    <a href="#"></a>
-                </div>
-                <div class="projects-item item">
-                    <img src="img/throw-me-right-mockup.png" class="phone" alt="project">
-                    <a href="#"></a>
+                    <h4>Study Counselling</h4>
+                    <p>Web app</p>
                 </div>
             </div>
         </section>
@@ -107,12 +109,13 @@
                 <span class="some-item"><a href="https://www.instagram.com/wojo_dz/" target="_blank"><i class="fab fa-instagram"></i></a></span>
             </div>
         </section>
-        <section class="exact-project">
+        <section class="exact-project" id="tmr">
             <div class="exact-project-container">
                 <div class="project-main-content">
-                    <i class="close fas fa-times"></i>
-                    <div class="project-visualisation">
-                        <img src="img/throw-me-right-mockup.png" alt="project">
+                    <i class="close close1 fas fa-times"></i>
+                    <a href="#start" class="scroll-up-btn"><i class="fas fa-angle-up"></i></a>
+                    <div class="project-visualisation" id="start">
+                        <img src="img/throw-me-right-final1.png" alt="project">
                     </div>
                     <div class="project-info">
                         <h3>Throw me right</h3>
@@ -124,23 +127,18 @@
                             </span>
                             <span class="project-details-item">
                                 <i class="fas fa-tools"></i>
-                                <p>Adobe XD</p>
+                                <p>Adobe XD, JavaScript, Github</p>
                             </span>
                             <span class="project-details-item">
                                 <i class="fas fa-link"></i>
                                 <a href="https://tmr.anaiacovache.dk/" target="_blank"><p>Explore the prototype</p></a>
                             </span>
                         </div>
-                        <div class="devices">Solution prepared for: <i class="fas fa-mobile"></i><i class="fas fa-tablet"></i><i class="fas fa-desktop"></i></div>
+                        <div class="devices">Solution prepared for: <i class="fas fa-mobile"></i></div>
                         <h4>Problem</h4>
                         <p class="project-text">We live in time when global warming and pollution harmfully effects on our planet. Despite the fact that many people try to do their best to decrease this problem, still many of them do not have any idea how to start and how to do this correctly. That's why, me and my group wanted to do a single page application web app which will help them to do first step. The main purpose is showing people how to recycle their trash.
                         </p>
                     </div>
-                </div>
-                <div class="project-process-content">
-                    <h4>Mindmap</h4>
-                    <p class="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper gravida tortor in sodales. Mauris condimentum risus eget vulputate maximus. Aenean varius justo urna, quis consequat neque ultricies et. Donec viverra mauris in tortor condimentum, nec pharetra odio gravida. <br>
-                        Aliquam eu iaculis mauris, at hendrerit sapien. Nullam vestibulum hendrerit rutrum. Pellentesque scelerisque elementum diam, in pulvinar nunc varius ut. Morbi non est vitae lacus gravida blandit. Donec iaculis diam nec pharetra consequat. Phasellus luctus nibh ante, ac dictum massa hendrerit lobortis.</p>
                 </div>
                 <div class="project-process-content">
                     <h4>Sketches</h4>
@@ -159,9 +157,10 @@
                     <h4>Style tiles</h4>
                     <p class="project-text">Wireframes as a lo-fi digital prototype is a good choice before you'll start doing mockups. It enabled us to make a final decision of how to divide sections and where to place all important elements like buttons, icons, and images.
                     </p>
+                    <img src="img/tmr" class="sketch" alt="mockup1"> 
                 </div>
                 <div class="project-process-content">
-                    <h4>Mockup</h4>
+                    <h4>Mockups</h4>
                     <p class="project-text">Mockups as a hi-fi prototype is characterised by preparing digital product as beautiful as it can be with the smallest details.<br><br>
 
                         Firstly, We decided to make a background in white color to keep our app clear, and green on other elements like navigation and headings. Due to our main feature, searching item function, we created yellow button in the center of navigation because we wanted to highlight this function.<br><br>
@@ -170,20 +169,152 @@
                         
                         Furthermore, based on 15 our research we added map where user can check all recycling spot in the city and choose which category are they interested in.                        
                     </p>
-                    <img src="img/mockups.jpg" class="sketch" alt="mockup1"> 
+                    <img src="img/tmr-mockups.jpg" class="sketch" alt="mockup1"> 
                 </div>
                 <div class="project-process-content">
                     <h4>Final product</h4>
                     <p class="project-text">This is our final solution! Some changes has change since mockups, some not. But overall we are proud of our solution.
                     </p>
-                    <img src="img/throw-me-right-mockup.png" class="final-product" alt="Final product1">
+                    <img src="img/throw-me-right-final1.png" class="final-product" alt="Final product1">
                     <img src="img/throw-me-right-final2.png" class="final-product" alt="Final product2">
                     <img src="img/throw-me-right-final3.png" class="final-product" alt="Final product3">
                 </div>
                 <div class="project-process-content">
                     <h4>Code</h4>
-                    <p class="project-text">Wireframes as a lo-fi digital prototype is a good choice before you'll start doing mockups. It enabled us to make a final decision of how to divide sections and where to place all important elements like buttons, icons, and images.
+                    <p class="project-text">In this project we mostly focused on vanilla JavaScript. We wanted to learn that it's possible to code web app/app only based on JS. Also we needed a place where we would store data that's why we used Firebase. Our main features are searching items option and sending requestes to administration. Moreover, our app is fully working single page application. 
                     </p>
+                    <img src="img/tmr-code.jpg" class="sketch" alt="mockup1"> 
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="exact-project" id="sc">
+            <div class="exact-project-container">
+                <div class="project-main-content">
+                    <i class="close close2 fas fa-times"></i>
+                    <a href="#start" class="scroll-up-btn"><i class="fas fa-angle-up"></i></a>
+                    <div class="project-visualisation" id="start">
+                        <img src="img/study-counselling-mockup.svg" class="img-tablet" alt="project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Study Counselling</h3>
+                        <p class="type">Web app</p>
+                        <div class="project-details">
+                            <span class="project-details-item">
+                                <i class="fas fa-user"></i>
+                                <p>UX/UI designer, front-end developer</p>
+                            </span>
+                            <span class="project-details-item">
+                                <i class="fas fa-tools"></i>
+                                <p>Adobe XD, JavaScript, jQuery, BEM, Sass, Github</p>
+                            </span>
+                            <span class="project-details-item">
+                                <i class="fas fa-link"></i>
+                                <a href="https://madeele.github.io/DorteStudyCounseling/" target="_blank"><p>Explore the prototype</p></a>
+                            </span>
+                        </div>
+                        <div class="devices">Solution prepared for: <i class="fas fa-tablet"></i><i class="fas fa-desktop"></i></div>
+                        <h4>Problem</h4>
+                        <p class="project-text">The main purpose for this product was creating a solution which will enable new and current students get important infomation in easy and fast way. Client wanted to have a information about school programmes, options for further carrers after AP degree, booking appointments system and more. But the most important fact is that this solution had to be used on devices like tv screen or tablets. As a team, we did our best to combine all requirements and created app for tablets for all users. Our idea was having a tablets in different school's places where students would be able to use for free. 
+                        </p>
+                    </div>
+                </div>
+                <div class="project-process-content">
+                    <h4>Sketches</h4>
+                    <p class="project-text">Research can be an extremly interesting part of process but let's focus on design part. As usual, everyone in group prepared some simple visualisation for our solution. Subsequently, we combined our ideas into one product.
+                    </p>
+                </div>
+                <div class="project-process-content">
+                    <h4>Wireframes</h4>
+                    <p class="project-text">We put our ideas into lo-fi digital version, wireframes. Becuase it was our first concept, everything had changed later in the process.
+                    </p>
+                    <img src="img/sc-wireframes.jpg" class="sketch" alt="sketches">
+                </div>
+                <div class="project-process-content">
+                    <h4>Style tiles</h4>
+                    <p class="project-text">Our team for a long time was wondering how to show students that the study counselling place has a welcoming and cosy aproach and no one should be affraid to ask for help. That's why we decided to use warm colors and animated avarat of our client.
+                    </p>
+                </div>
+                <div class="project-process-content">
+                    <h4>Mockups</h4>
+                    <p class="project-text">In mockups we created whole hi-fi digital version of our solution. We know that new students can be stressed and overwhelmed so we decided to keep everything  in minimalist, cheerfull and clear style so no one should have problem with using it. <br><br> 
+                        
+                        In our solution we created three sections: FAQ, Test, and Calendar. In the first one, user can find answers on the most common question. In Test section user can answer on question related to school programmes and e.g. get information which top up program suits to him the most. The last option is calendar with booking an appointment with workers in Study counselling.                        
+                    </p>
+                     <img src="img/sc-mockups.jpg" class="sketch" alt="mockup">
+                </div>
+                <div class="project-process-content">
+                    <h4>Final product</h4>
+                    <p class="project-text">Now you can see our final product. Compare to mockups we changed some things like colors shades, names of sections to be more specific what they contain and design of those sections. Now we are proude how our solution looks and works. 
+                    </p>
+                    <img src="img/study-counselling-final1.png" class="final-product tablet-final" alt="mockup1"> 
+                    <img src="img/study-counselling-final2.png" class="final-product tablet-final" alt="mockup2"> 
+                    <img src="img/study-counselling-final3.png" class="final-product tablet-final" alt="mockup3"> 
+                    <img src="img/study-counselling-final4.png" class="final-product tablet-final" alt="mockup4"> 
+                    <img src="img/study-counselling-final5.png" class="final-product tablet-final" alt="mockup4">
+                </div>
+                <div class="project-process-content">
+                    <h4>Code</h4>
+                    <p class="project-text">Coding in group is always challanging. To make it easy we used BEM methodology to be sure that each member of team will write class names in the same way like others. In addition, we focus on jQuery code what enabled us to write scripts in easier and faster way than in vanilla JavaScript (mostly due to our lectures order).
+                    </p>
+                    <img src="img/sc-code.jpg" class="sketch" alt="mockup1">
+                </div>
+                
+            </div>
+            </div>
+        </section>
+        <section class="exact-project" id="salvatio">
+            <div class="exact-project-container">
+                <div class="project-main-content">
+                    <i class="close close3 fas fa-times"></i>
+                    <a href="#start" class="scroll-up-btn"><i class="fas fa-angle-up"></i></a>
+                    <div class="project-visualisation" id="start">
+                        <img src="img/salvatio-mockup.png" alt="project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Salvatio Push</h3>
+                        <p class="type">Digital prototype</p>
+                        <div class="project-details">
+                            <span class="project-details-item">
+                                <i class="fas fa-user"></i>
+                                <p>UX/UI designer</p>
+                            </span>
+                            <span class="project-details-item">
+                                <i class="fas fa-tools"></i>
+                                <p>Adobe XD, Photoshop</p>
+                            </span>
+                            <span class="project-details-item">
+                                <i class="fas fa-link"></i>
+                                <a href="https://xd.adobe.com/view/3c08bf60-dd34-4fbe-5798-48b2ff4913c1-4a39/screen/bd3ee32d-043e-405c-8bdf-9ceedb59b17c?hints=off" target="_blank"><p>Explore the prototype</p></a>
+                            </span>
+                        </div>
+                        <div class="devices">Solution prepared for: <i class="fas fa-mobile"></i></div>
+                        <h4>Problem</h4>
+                        <p class="project-text">The Salvatio push company is a start up which helps people in danger. User, in dangerous situation, has to tap 1-3 times the salvatio push''s device which sends information by app in his phone to closest friends. The product is reserved mostly for women, elder people and atheletes. In cooperation with Magda Polakowska, we had to improve current (at this time) design and also create new stuff to mockup.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-process-content">
+                    <h4>Style tiles</h4>
+                    <p class="project-text">Before we joined to Salvatio push team, they've had already a logo and visual identity. That's why we decided to use those color in our improved version of digital prototype. The same like in logo we used this gradient as a colors for elements like top bar, navigation and call to action buttons. 
+                    </p>
+                    <img src="img/salvatio-style-tile.png" class="sketch" alt="mockup1"> 
+                </div>
+                <div class="project-process-content">
+                    <h4>Mockups</h4>
+                    <p class="project-text">In mockup we had to show whole process of using this app, starting from creating an account and connecting app with device, finishing on searching people in danger and changing settings. Because not only women are in target group but also elder people we tried to keep layout and main function as simple as possible. <br><br>
+
+                        Generally the main page contains information with types of messages and easy access to settings where user can change the text of messages. In navigation user can find options with where can manage close contact, map with people in danger, settings and also user profile. Regarding map, user can check there how many people responded, how muh time it will take him to go to this place and the address.                        
+                    </p>
+                    <img src="img/salvatio-mockups.jpg" class="sketch" alt="mockup1"> 
+                </div>
+                <div class="project-process-content">
+                    <h4>Final product</h4>
+                    
+                    <img src="img/salvatio-push-final1.png" class="final-product" alt="Final product1">
+                    <img src="img/salvatio-push-final2.png" class="final-product" alt="Final product2">
+                    <img src="img/salvatio-push-final3.png" class="final-product" alt="Final product3">
+                    <img src="img/salvatio-push-final4.png" class="final-product" alt="Final product4">
                 </div>
                 
             </div>

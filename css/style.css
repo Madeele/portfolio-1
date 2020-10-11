@@ -614,6 +614,7 @@ main{
 .exact-project-container{
     overflow-y: scroll;
     height: auto;
+    width: 100%;
     background-color: #fff;
 }
 

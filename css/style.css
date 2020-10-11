@@ -719,6 +719,7 @@ main{
 
 .sketch{
     width: 100%;
+    height: auto;
 }
 
 .final-product{
@@ -915,7 +916,6 @@ main{
     .projects-container{
         max-width: 1100px;
         margin: 10px auto;
-        grid-template-columns: 33.33% 33.33% 33.33%;
     }
 
     .timeline-container{

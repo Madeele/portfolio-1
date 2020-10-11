@@ -270,7 +270,7 @@ main{
 }
 
 .phone{
-     width: 40%;
+    max-width: 150px;
     height: auto;
 }
 
@@ -718,7 +718,7 @@ main{
 }
 
 .sketch{
-    width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
@@ -980,6 +980,6 @@ main{
     }
 
     .sketch{
-        width: 75%;
+        max-width: 800px;
     }
 }

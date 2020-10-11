@@ -230,18 +230,18 @@ main{
     margin-left: calc(100% - (92% + 10px));
     margin-top: 20px;
     margin-bottom: 20px;
-    flex-grow: 1;
+    flex-grow: 0.5;
 }
 
 .projects-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 .projects-item{
-    width: calc(0vw + 85%);
+    width: 85%;
     padding: 15px 10px;
     margin: 15px auto;
     display: flex;
@@ -749,7 +749,11 @@ main{
     }
 
     .projects-container{
-        grid-template-columns: 50% 50%;
+        flex-direction: row;
+    }
+
+    .projects-item{
+        width: 45%;
     }
 
     .experience-page h2{

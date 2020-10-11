@@ -192,7 +192,7 @@ main{
 .splash-page img{
     position: absolute;
     bottom: -100px;
-    left: -100px;
+    left: -15%;
     transform: rotate(0deg);
     width: auto;
     max-height: calc(100vh - 25%);
@@ -201,8 +201,8 @@ main{
 
 .main-heading{
     font-size: 40px;
+    margin: 5% 10px 0 0;
     position: absolute;
-    top: calc(50vh - 300px);
     left: calc(50vw - 20%);
     animation: startAnime1 1s ease-out;
     animation-delay: 1.5s;
@@ -279,8 +279,7 @@ main{
 }
 
 .projects-item img{
-    display: block;
-    margin: 0 auto;
+    margin: auto;
     transition: 0.1s;
 }
 
@@ -738,6 +737,7 @@ main{
     .splash-page img{
         width: auto;
         max-height: calc(100vh - 10%);
+        left: -15%;
     }
 
     .sub-heading{
@@ -906,10 +906,12 @@ main{
     .splash-page img{
         width: auto;
         max-height: calc(100vh - 10%);
+        left: -5%;
     }
 
     .main-heading{
         font-size: 70px;
+        margin: 5% 0;
     }
 
     .sub-heading{
